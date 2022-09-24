@@ -14,8 +14,7 @@
   "overrides": [
   ],
   "parserOptions": {
-    "tsconfigRootDir": "./spacallix-frontend",
-    "project": ["./tsconfig.json", "./tsconfig.node.json"],
+    "project": ["./spacallix-frontend/tsconfig.json", "./spacallix-frontend/tsconfig.node.json"],
     "ecmaFeatures": {
       "jsx": true
     },

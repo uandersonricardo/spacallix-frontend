@@ -26,7 +26,7 @@ const menu = [
 const HeaderDropdown: React.FC = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button className="flex p-2 text-lg items-center justify-center bg-gradient-to-tl from-pink-600 to-purple-600 text-white/75 hover:text-white rounded-lg hover:opacity-100 transition duration-200">
+      <Menu.Button className="flex p-2 text-lg items-center justify-center bg-gradient-to-l from-pink-600 to-purple-600 text-white/75 hover:text-white rounded-lg hover:opacity-100 transition duration-200">
         <TbRocket />
       </Menu.Button>
       <Transition

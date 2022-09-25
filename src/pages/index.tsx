@@ -15,18 +15,22 @@ const HomePage: React.FC = () => {
         <HomeButton
           title="Próximo lançamento"
           description="Veja detalhes do próximo lançamento da SpaceX"
+          to="/next"
         />
         <HomeButton
           title="Último lançamento"
           description="Veja detalhes do último lançamento da SpaceX"
+          to="/latest"
         />
         <HomeButton
           title="Próximos lançamentos"
           description="Veja detalhes do próximos lançamentos da SpaceX"
+          to="/upcoming"
         />
         <HomeButton
           title="Lançamentos anteriores"
           description="Veja detalhes dos lançamentos anteriores da SpaceX"
+          to="/past"
         />
       </div>
     </div>

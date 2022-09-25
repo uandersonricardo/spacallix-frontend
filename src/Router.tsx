@@ -1,16 +1,28 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
 import { Redirect, Route, Switch } from "wouter";
 
 import Header from "./components/layout/Header";
-import HomePage from "./pages";
+import Loading from "./components/layout/Loading";
+
+const HomePage = lazy(async () => await import("./pages"));
+const UpcomingPage = lazy(async () => await import("./pages/upcoming"));
 
 const Router: React.FC = () => (
   <>
     <Header />
     <main className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col relative h-full">
       <Switch>
-        <Route path="/" component={HomePage} />
+        <Route path="/upcoming">
+          <Suspense fallback={<Loading />}>
+            <UpcomingPage />
+          </Suspense>
+        </Route>
+        <Route path="/">
+          <Suspense fallback={<Loading />}>
+            <HomePage />
+          </Suspense>
+        </Route>
         <Route>
           <Redirect to="/" />
         </Route>

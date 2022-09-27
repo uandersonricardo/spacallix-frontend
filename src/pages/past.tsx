@@ -8,10 +8,10 @@ import getPaginatedLaunches from "../requests/getPaginatedLaunches";
 
 const defaultOptions = {
   perPage: 5,
-  upcoming: true
+  upcoming: false
 };
 
-const UpcomingPage: React.FC = () => {
+const PastPage: React.FC = () => {
   const { status, isFetchingNextPage, fetchNextPage, data, hasNextPage } =
     useInfiniteQuery(
       ["getPaginatedLaunches", defaultOptions],
@@ -26,9 +26,9 @@ const UpcomingPage: React.FC = () => {
   return (
     <div className="w-full flex-1 flex flex-col pb-4">
       <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 lg:mb-8">
-        Próximos{" "}
+        Lançamentos{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-          lançamentos
+          anteriores
         </span>
       </h1>
       {status === "loading" ? (
@@ -68,4 +68,4 @@ const UpcomingPage: React.FC = () => {
   );
 };
 
-export default UpcomingPage;
+export default PastPage;

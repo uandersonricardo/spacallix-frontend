@@ -50,7 +50,7 @@ const PastPage: React.FC = () => {
                     name={item.name}
                     date={item.date}
                     number={item.flightNumber}
-                    to={`/launches/${item.id}`}
+                    to={`/${item.id}`}
                   />
                 ))}
               </React.Fragment>

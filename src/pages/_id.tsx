@@ -3,18 +3,22 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import LaunchDetailsCard from "../components/pages/LaunchDetailsCard";
-import getNextLaunch from "../requests/getNextLaunch";
+import getLaunchById from "../requests/getLaunchById";
 
-const NextPage: React.FC = () => {
+interface IdPageProps {
+  id: string;
+}
+
+const IdPage: React.FC<IdPageProps> = ({ id }) => {
   const { isLoading, isError, data } = useQuery(
-    ["getNextLaunch"],
-    async () => await getNextLaunch()
+    ["getLaunchById", id],
+    async () => await getLaunchById(id)
   );
 
   return (
     <div className="w-full flex-1 flex flex-col pb-4">
       <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 lg:mb-8">
-        Próximo{" "}
+        Detalhes do{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
           lançamento
         </span>
@@ -34,4 +38,4 @@ const NextPage: React.FC = () => {
   );
 };
 
-export default NextPage;
+export default IdPage;

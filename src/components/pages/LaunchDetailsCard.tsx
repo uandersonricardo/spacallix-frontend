@@ -24,12 +24,12 @@ const LaunchDetailsCard: React.FC<LaunchDetailsCardProps> = ({ launch }) => {
           <h2 className="text-3xl font-bold break-words">{launch.name}</h2>
           <p className="text-lg text-slate-400">
             Resultado:{" "}
-            {launch.success ? (
+            {launch.success === true ? (
               <span className="text-green-400 font-bold">Sucesso</span>
-            ) : !launch.success ? (
+            ) : launch.success === false ? (
               <span className="text-red-400 font-bold">Falha</span>
             ) : (
-              <span className="text-yellow-400 font-bold">Falha</span>
+              <span className="text-yellow-400 font-bold">Não definido</span>
             )}
           </p>
         </div>

@@ -4,7 +4,7 @@ import HomeButton from "../components/pages/HomeButton";
 
 const HomePage: React.FC = () => {
   return (
-    <div className="w-full flex-1 flex flex-col justify-center">
+    <div className="w-full flex-1 flex flex-col justify-center py-4">
       <h1 className="font-bold text-center text-5xl md:text-6xl lg:text-7xl text-white mb-8 md:mb-12 lg:mb-16">
         A plataforma definitiva de lançamentos da{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">

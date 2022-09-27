@@ -3,18 +3,18 @@ import React from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import LaunchDetailsCard from "../components/pages/LaunchDetailsCard";
-import getNextLaunch from "../requests/getNextLaunch";
+import getLatestLaunch from "../requests/getLatestLaunch";
 
-const NextPage: React.FC = () => {
+const LatestPage: React.FC = () => {
   const { isLoading, isError, data } = useQuery(
-    ["getNextLaunch"],
-    async () => await getNextLaunch()
+    ["getLatestLaunch"],
+    async () => await getLatestLaunch()
   );
 
   return (
     <div className="w-full flex-1 flex flex-col pb-4">
       <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 lg:mb-8">
-        Próximo{" "}
+        Último{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
           lançamento
         </span>
@@ -34,4 +34,4 @@ const NextPage: React.FC = () => {
   );
 };
 
-export default NextPage;
+export default LatestPage;

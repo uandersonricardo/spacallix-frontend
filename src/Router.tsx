@@ -8,7 +8,9 @@ import Loading from "./components/layout/Loading";
 const HomePage = lazy(async () => await import("./pages"));
 const UpcomingPage = lazy(async () => await import("./pages/upcoming"));
 const PastPage = lazy(async () => await import("./pages/past"));
+const IdPage = lazy(async () => await import("./pages/_id"));
 const NextPage = lazy(async () => await import("./pages/next"));
+const LatestPage = lazy(async () => await import("./pages/latest"));
 
 const Router: React.FC = () => (
   <>
@@ -20,6 +22,11 @@ const Router: React.FC = () => (
             <NextPage />
           </Suspense>
         </Route>
+        <Route path="/latest">
+          <Suspense fallback={<Loading />}>
+            <LatestPage />
+          </Suspense>
+        </Route>
         <Route path="/past">
           <Suspense fallback={<Loading />}>
             <PastPage />
@@ -29,6 +36,13 @@ const Router: React.FC = () => (
           <Suspense fallback={<Loading />}>
             <UpcomingPage />
           </Suspense>
+        </Route>
+        <Route path="/:id">
+          {params => (
+            <Suspense fallback={<Loading />}>
+              <IdPage id={params.id} />
+            </Suspense>
+          )}
         </Route>
         <Route path="/">
           <Suspense fallback={<Loading />}>

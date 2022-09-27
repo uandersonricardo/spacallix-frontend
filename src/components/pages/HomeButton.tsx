@@ -17,7 +17,7 @@ const HomeButton: React.FC<HomeButtonProps> = ({ title, description, to }) => {
           <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-bold">
             {title}
           </h2>
-          <p className="mt-1 text-slate-500 text-sm md:text-md lg:text-lg">
+          <p className="mt-1 text-slate-400 text-sm md:text-md lg:text-lg">
             {description}
           </p>
         </div>

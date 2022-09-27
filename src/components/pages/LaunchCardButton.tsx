@@ -25,7 +25,7 @@ const LaunchCardButton: React.FC<LaunchCardButtonProps> = ({
             <TbRocket className="mr-3" />
             <h2 className="items-center truncate flex-1">{name}</h2>
           </div>
-          <p className="mt-1 text-slate-500 text-sm md:text-md lg:text-lg truncate max-w-full">
+          <p className="mt-1 text-slate-400 text-sm md:text-md lg:text-lg truncate max-w-full">
             Voo #{number}
             {" | "}
             {new Date(date).toLocaleDateString("pt-BR", {

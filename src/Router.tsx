@@ -7,12 +7,18 @@ import Loading from "./components/layout/Loading";
 
 const HomePage = lazy(async () => await import("./pages"));
 const UpcomingPage = lazy(async () => await import("./pages/upcoming"));
+const NextPage = lazy(async () => await import("./pages/next"));
 
 const Router: React.FC = () => (
   <>
     <Header />
     <main className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col relative h-full">
       <Switch>
+        <Route path="/next">
+          <Suspense fallback={<Loading />}>
+            <NextPage />
+          </Suspense>
+        </Route>
         <Route path="/upcoming">
           <Suspense fallback={<Loading />}>
             <UpcomingPage />

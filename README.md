@@ -1,8 +1,10 @@
-# spacallix-backend
+# spacallix-frontend
 
 ## Sobre o repositório
 
 O spacalliX é uma plataforma de informações sobre os lançamentos da SpaceX. Esse repositório contém o frontend da aplicação, que é responsável por consumir os dados do backend e exibi-los para o usuário.
+
+Demo: https://spacallix-frontend-aqz6.vercel.app/
 
 ## Tecnologias utilizadas
 
